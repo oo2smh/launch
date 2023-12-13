@@ -1,0 +1,332 @@
+# JS-100 PEMDAC: Javascript Basics
+
+## Reading Documentation I
+
+1. Finding Documentation
+2. Lowercase
+3. Mountain Caps
+4. Array Element Access
+5. Out of Bounds
+6. Property vs Method
+7. Type of Primitive
+8. Return Values
+9. Method Chaining
+10. Equality
+
+### 1. Finding Documentation
+
+#### PROBLEM
+
+1. Input, Output, Rules/Additional Details
+
+### 2. Lowercase
+
+### 3. Mountain Caps
+
+### 4. Array Element Access
+
+### 5. Out of Bounds
+
+### 6. Property vs Method
+
+### 7. Type of Primitive
+
+### 8. Return Values
+
+### 9. Method Chaining
+
+### 10. Equality
+
+## Reading Documentation II
+
+1. Style Guide
+2. Data Types
+3. Largest Number
+4. Arithmetic Operator Precedence
+5. Date
+6. Which Year Is This?
+7. Argument Signatures
+8. String Concatenation
+9. SyntaxError
+10. TypeError
+
+### 1. Style Guide
+
+### 2. Data Types
+
+### 3. Largest Number
+
+### 4. Arithmetic Operator Precedence
+
+### 5. Date
+
+### 6. Which Year Is This?
+
+### 7. Argument Signatures
+
+### 8. String Concatenation
+
+### 9. SyntaxError
+
+### 10. TypeError
+
+## Loops
+
+1. Loop and Log
+2. Countdown
+3. Triple Greeting
+4. Take Two
+5. Looping over Array Elements
+6. Continue
+7. And on and on and on
+8. That's Odd
+9. Finding Nemo
+10. Do...While
+
+### 1. Loop and Log
+
+### 2. Countdown
+
+### 3. Triple Greeting
+
+### 4. Take Two
+
+### 5. Looping over Array Elements
+
+### 6. Continue
+
+### 7. And on and on and on
+
+### 8. That's Odd
+
+### 9. Finding Nemo
+
+### 10. Do...While
+
+## Conditionals
+
+1. Truthy vs Falsy
+2. Yes? No? Part I
+3. Yes? No? Part II
+4. Check the Weather Part I
+5. Switch
+6. Check the Weather Part II
+7. Logical Conditions 1
+8. Logical Conditions 2
+9. Logical Conditions 3
+10. Are we moving?
+
+### 1. Truthy vs Falsy
+
+### 2. Yes? No? Part I
+
+### 3. Yes? No? Part II
+
+### 4. Check the Weather Part I
+
+### 5. Switch
+
+### 6. Check the Weather Part II
+
+### 7. Logical Conditions 1
+
+### 8. Logical Conditions 2
+
+### 9. Logical Conditions 3
+
+### 10. Are we moving?
+
+## Functions I
+
+1. Sum
+2. Log Quote
+3. Cite the Author
+4. Squared Number
+5. Display Division
+6. Three Way Comparison
+7. Transformation
+8. Internationalization I
+9. Locale Part 1
+10. Locale Part 2
+11. Internationalization II
+
+### 1. Sum
+
+### 2. Log Quote
+
+### 3. Cite the Author
+
+### 4. Squared Number
+
+### 5. Display Division
+
+### 6. Three Way Comparison
+
+### 7. Transformation
+
+### 8. Internationalization I
+
+### 9. Locale Part 1
+
+### 10. Locale Part 2
+
+### 11. Internationalization II
+
+## Variable Scope
+
+1. What's My Value? (Pt 1)
+2. What's My Value? (Pt 2)
+3. What's My Value? (Pt 3)
+4. What's My Value? (Pt 4)
+5. What's My Value? (Pt 5)
+6. What's My Value? (Pt 6)
+7. What's My Value? (Pt 7)
+8. What's My Value? (Pt 8)
+9. What's My Value? (Pt 9)
+10. What's My Value? (Pt 10)
+
+### 1. What's My Value? (Pt 1)
+
+### 2. What's My Value? (Pt 2)
+
+### 3. What's My Value? (Pt 3)
+
+### 4. What's My Value? (Pt 4)
+
+### 5. What's My Value? (Pt 5)
+
+### 6. What's My Value? (Pt 6)
+
+### 7. What's My Value? (Pt 7)
+
+### 8. What's My Value? (Pt 8)
+
+### 9. What's My Value? (Pt 9)
+
+### 10. What's My Value? (Pt 10)
+
+## Strings
+
+1. Length
+2. ALL CAPS
+3. Repeat
+4. MultiLine String
+5. Case-Insensitive Equality
+6. Contains Character
+7. Blank? Version 1
+8. Blank? Version 2
+9. Capitalize Words
+
+### 1. Length
+
+### 2. ALL CAPS
+
+### 3. Repeat
+
+### 4. MultiLine String
+
+### 5. Case-Insensitive Equality
+
+### 6. Contains Character
+
+### 7. Blank? Version 1
+
+### 8. Blank? Version 2
+
+### 9. Capitalize Words
+
+## Arrays
+
+1. First Element
+2. Last Element
+3. Add + Delete
+4. Alphabet
+5. Filter
+6. Vocabulary
+7. Equality
+8. Type
+9. Travel
+10. Passcode
+11. Checking Items off the Grocery List
+
+### 1. First Element
+
+### 2. Last Element
+
+### 3. Add + Delete
+
+### 4. Alphabet
+
+### 5. Filter
+
+### 6. Vocabulary
+
+### 7. Equality
+
+### 8. Type
+
+### 9. Travel
+
+### 10. Passcode
+
+### 11. Checking Items off the Grocery List
+
+## Functions 2
+
+1. Greet 1
+2. Greet 2
+3. Greet 3
+4. Calculate BMI
+5. Calculate Cat Age
+6. Remove Last Char
+7. Arrow Functions I
+8. Arrow Functions II
+
+### 1. Greet 1
+
+### 2. Greet 2
+
+### 3. Greet 3
+
+### 4. Calculate BMI
+
+### 5. Calculate Cat Age
+
+### 6. Remove Last Char
+
+### 7. Arrow Functions I
+
+### 8. Arrow Functions II
+
+## Objects
+
+1. Retrieve A Value I
+2. Retrieve A Value II
+3. Add a Property
+4. Greetings From Jane
+5. Dot Notation vs Bracket Notation
+6. Is it true?
+7. Car Keys
+8. Convert an object to a nested array
+9. ...And Vice Versa
+10. Cloning a Person
+
+### 1. Retrieve A Value I
+
+### 2. Retrieve A Value II
+
+### 3. Add a Property
+
+### 4. Greetings From Jane
+
+### 5. Dot Notation vs Bracket Notation
+
+### 6. Is it true?
+
+### 7. Car Keys
+
+### 8. Convert an object to a nested array
+
+### 9. ...And Vice Versa
+
+### 10. Cloning a Person
