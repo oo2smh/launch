@@ -1,0 +1,24 @@
+{
+  "en": {
+    "welcome": "Welcome to the Calculator!",
+    "firstQuestion": "What is the first number?",
+    "secondQuestion": "What is the second number?",
+    "invalidNumber": "That is not a valid number. Please enter a valid number",
+    "answer": "The answer is",
+    "operationInput": "Please enter a mathematical operation.\n (1) Addition, (2) Subtraction, (3) Multiplication, (4) Division (5) Remainder",
+    "invalidOperation": "Invalid input. Please enter a valid mathematical operation.\n (1) Addition, (2) Subtraction, (3) Multiplication, (4) Division (5) Remainder",
+    "playAgain": "Do you want to play again? If you do, answer with a 'yes'"
+  },
+  "ko": {
+    "welcome": "계산기에 반갑습니다",
+    "firstQuestion": "첫번째 번호가 무엇입니까?",
+    "secondQuestion": "두번째 번호가 무엇입니까?",
+    "invalidNumber": "번호가 아닙니다. 번호를 써주세요.",
+    "answer": "답:",
+    "operationInput": "연산을 써주세요.\n (1) 추가, (2) 빼냄, (3) 증가, (4) 나누기 (5) 나머지",
+    "invalidOperation": "입력이 잘못되었습니다. 올바른 수학 연산을 입력하십시오.\n(1) 덧셈, (2) 뺄셈, (3) 곱셈, (4) 나눗셈, (5) 나머지",
+    "playAgain": "다시 플레이하시겠습니까? 플레이 할 경우 '예'로 대답하십시오."
+  }
+  
+}
+
