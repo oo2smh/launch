@@ -1,16 +1,85 @@
+// #region[TOC]
+/*
+A - ESLINT PROBS
+B - NOTEPAD
+
+00 - EXTERNAL MODULES/FILES
+01 - HELPER FNS
+02 - CALC PROGRAM
+*/
+
+// #endregion[TOC]
+
+// #region[A] ESLINT PROBS
 /* eslint-disable max-statements */
 /* eslint-disable max-lines-per-function */
-// Ask the user for the first number.
-// Ask the user for the second number.
-// Ask the user for an operation to perform.
-// Perform the operation on the two numbers.
-// Print the result to the terminal.
+// #endregion[A]
 
-let MESSAGES = require('./calculator-messages.json');
+// #region[B] NOTEPAD
+/*
+--- LEGEND
+@@ = START, STOP
+[] = Processing Step
+  • Var Declaration,Assignment, Reassignment
+  • Value Transformation, Iteration, Type Conversion
+\\ = Input, Output
+<> = Decision/Conditional/
+-- = Yes/No Decision Branches
+() = Connector
+~~ = loop block
+__ = non-loop block or within the global scope
+ƒƒ = functions
+
+
+--- ROUGH PSEUDOCODE/MENTAL MODEL
+@@ START
+00 Ask the user for the first number.
+01 Ask the user for the second number.
+02 Ask the user for an operation to perform.
+03 Perform the operation on the two numbers.
+04 Print the result to the terminal.
+@@ STOP
+
+
+--- MAIN FLOWCHART
+@START@
+__ Z
+- \\ Output: Welcome Users to App
+~~ Play Again Loop
+  ~~ A Loop
+  01 \\ Input: 1st Number
+  02 <> Check Validity of number 1
+    -- True ƒƒ isInvalid => A
+    -- False ƒƒ isinvalid => B
+  ~~ B Loop
+  01 \\ Input: 2nd Number
+  02 <> Check Validity of number 2
+    -- True ƒƒ isInvalid => B
+    -- False ƒƒ isInvalid => C
+  ~~ C Loop
+  01 \\ Input: Operator
+  02 <> Check Validity of Operator
+    -- True ƒƒ isInvalidOperator => C
+    -- False ƒƒ isInvalidOperator => D
+  __ D Loop
+  01 [] result = num1 (operation) num2
+  02 \\ Output result
+  03 \\ Input play again?
+  04 <> Check answer of Play Again (03)
+    -- True: Start Play Again Loop. Back to A
+    -- False: STOP
+@STOP@
+*/
+// #endregion[B]
+
+// #region[00] EXTERNAL MODULES/FILES
+let messages = require('./calculator-messages.json');
 let readline = require('readline-sync');
+// #endregion[00]
 
+// #region[01] HELPER FNS
 function getMessages(lang = 'en', message) {
-  return MESSAGES[lang][message];
+  return messages[lang][message];
 }
 
 function isInvalidNumber(number) {
@@ -22,33 +91,35 @@ function prompt(message) {
 }
 
 function printResult(output) {
-  console.log(`${getMessages('ko', 'answer')} ${output}`);
+  console.log(`${getMessages('en', 'answer')} ${output}`);
 }
+// #endregion[01]
 
+// #region[02] CALC PROGRAM
 function calculator() {
-  prompt(getMessages('ko', 'firstQuestion'));
+  prompt(getMessages('en', 'firstQuestion'));
   let number1 = readline.question();
   console.log(number1);
 
   while (isInvalidNumber(number1)) {
-    prompt(getMessages('ko', 'invalidNumber'));
+    prompt(getMessages('en', 'invalidNumber'));
     number1 = readline.question();
   }
 
-  prompt(getMessages('ko', 'secondQuestion'));
+  prompt(getMessages('en', 'secondQuestion'));
   let number2 = readline.question();
   while (isInvalidNumber(number2)) {
-    prompt(getMessages('ko', 'invalidNumber'));
+    prompt(getMessages('en', 'invalidNumber'));
     number2 = readline.question();
   }
 
-  prompt(getMessages('ko', 'operationInput'));
+  prompt(getMessages('en', 'operationInput'));
   let operation = readline.question();
 
   while (
     !['1', '2', '3', '4', '5', '+', '-', '*', '/', '5'].includes(operation)
   ) {
-    prompt(getMessages('ko', 'invalidOperation'));
+    prompt(getMessages('en', 'invalidOperation'));
     operation = readline.question();
   }
 
@@ -79,7 +150,7 @@ function calculator() {
       break;
   }
 
-  prompt(getMessages('ko', 'playAgain'));
+  prompt(getMessages('en', 'playAgain'));
   let playAgain = readline.question().toLowerCase();
   let validResponses = ['yes', 'y', 'ok', 'ye'];
 
@@ -88,6 +159,6 @@ function calculator() {
   }
 
 }
+// #endregion[02]
 
 calculator();
-
