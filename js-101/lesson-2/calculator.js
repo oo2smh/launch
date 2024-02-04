@@ -27,8 +27,8 @@ B - NOTEPAD
 -- = Yes/No Decision Branches
 () = Connector
 ~~ = loop block
-__ = non-loop block or within the global scope
-ƒƒ = functions
+__ = generic grouping
+fn = function
 
 
 --- ROUGH PSEUDOCODE/MENTAL MODEL
@@ -49,18 +49,18 @@ __ Z
   ~~ A Loop
   01 \\ Input: 1st Number
   02 <> Check Validity of number 1
-    -- True ƒƒ isInvalid => A
-    -- False ƒƒ isinvalid => B
+    -- True fn isInvalid => A
+    -- False fn isinvalid => B
   ~~ B Loop
   01 \\ Input: 2nd Number
   02 <> Check Validity of number 2
-    -- True ƒƒ isInvalid => B
-    -- False ƒƒ isInvalid => C
+    -- True fn isInvalid => B
+    -- False fn isInvalid => C
   ~~ C Loop
   01 \\ Input: Operator
   02 <> Check Validity of Operator
-    -- True ƒƒ isInvalidOperator => C
-    -- False ƒƒ isInvalidOperator => D
+    -- True fn isInvalidOperator => C
+    -- False fn isInvalidOperator => D
   __ D Loop
   01 [] result = num1 (operation) num2
   02 \\ Output result
