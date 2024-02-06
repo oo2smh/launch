@@ -1,0 +1,11 @@
+{
+  "welcome": "Welcome! This is a rock, paper, scissors game. You will be playing against the computer",
+  "userChoice": "Choose one: (r) rock, (p) paper, (sc) scissors, (l) lizard, (sp) spock",
+  "invalidChoice": "That's not a valid choice. Please try again. Valid responses are rock (r), paper (p), scissors (sc), lizard (l), spock (sp)",
+  "stalemate": "Stalemate. It's a tie",
+  "winner": "Congrats!! You win",
+  "loser": "You lost. The Computer wins",
+  "playAgain": "Wanna play again. Enter a (y/n)?",
+  "invalidYesNo": "Invalid statement. Valid statements are (y/n). "
+
+}
