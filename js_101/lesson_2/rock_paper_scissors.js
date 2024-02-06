@@ -32,18 +32,18 @@ function displayWinner(userChoice, computerChoice) {
   // --- COMPARE USER VS COMP CHOICES
   prompt(`You chose ${userChoice}. The computer chose ${computerChoice}`);
 
-  if (userChoice.startsWith('r') && computerChoice.startsWith('l') ||
-userChoice.startsWith('p') && computerChoice.startsWith('r') ||
-userChoice.startsWith('sc') && computerChoice.startsWith('p') ||
-userChoice.startsWith('l') && computerChoice.startsWith('sp') ||
-userChoice.startsWith('sp') && computerChoice.startsWith('sc')) {
+  if ((userChoice.startsWith('r') && computerChoice.startsWith('l')) ||
+(userChoice.startsWith('p') && computerChoice.startsWith('r')) ||
+(userChoice.startsWith('sc') && computerChoice.startsWith('p')) ||
+(userChoice.startsWith('l') && computerChoice.startsWith('sp')) ||
+(userChoice.startsWith('sp') && computerChoice.startsWith('sc'))) {
     prompt(messages.winner);
     userScore += 1;
-  } else if (computerChoice.startsWith('r') && userChoice.startsWith('l') ||
-  computerChoice.startsWith('p') && userChoice.startsWith('r') ||
-  computerChoice.startsWith('sc') && userChoice.startsWith('p') ||
-  computerChoice.startsWith('l') && userChoice.startsWith('sp') ||
-  computerChoice.startsWith('sp') && userChoice.startsWith('sc')) {
+  } else if ((computerChoice.startsWith('r') && userChoice.startsWith('l')) ||
+  (computerChoice.startsWith('p') && userChoice.startsWith('r')) ||
+  (computerChoice.startsWith('sc') && userChoice.startsWith('p')) ||
+  (computerChoice.startsWith('l') && userChoice.startsWith('sp')) ||
+  (computerChoice.startsWith('sp') && userChoice.startsWith('sc'))) {
     prompt(messages.loser);
     computerScore += 1;
   } else {
