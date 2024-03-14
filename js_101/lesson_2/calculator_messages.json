@@ -1,23 +1,29 @@
 {
   "en": {
-    "welcome": "Welcome to the Calculator!",
-    "firstQuestion": "What is the first number?",
-    "secondQuestion": "What is the second number?",
+    "welcome": "Welcome to the Calculator Program! This program allows you to perform addition, subtraction, multiplication and division.",
+    "chooseLanguage": "Choose your language [1] English, [2] Korean",
+    "invalidLanguage": "That's an invalid response. Please choose [1] English or [2] Korean",
+    "languageConfirmation": "You have chosen English as your default language",
+    "firstNumber": "What is the first number?",
+    "secondNumber": "What is the second number?",
     "invalidNumber": "That is not a valid number. Please enter a valid number",
     "answer": "The answer is",
     "operationInput": "Please enter a mathematical operation.\n (1) Addition, (2) Subtraction, (3) Multiplication, (4) Division (5) Remainder",
     "invalidOperation": "Invalid input. Please enter a valid mathematical operation.\n (1) Addition, (2) Subtraction, (3) Multiplication, (4) Division (5) Remainder",
-    "playAgain": "Do you want to play again? If you do, answer with a 'yes'"
+    "stopPlaying": "Do you want to stop playing? To stop play, answer with a 'no' Otherwise press 'Enter' to play again."
   },
   "ko": {
     "welcome": "계산기에 반갑습니다",
-    "firstQuestion": "첫번째 번호가 무엇입니까?",
-    "secondQuestion": "두번째 번호가 무엇입니까?",
-    "invalidNumber": "번호가 아닙니다. 번호를 써주세요.",
+    "chooseLanguage": "언어를 선택하세요 [1] 영어, [2] 한국어",
+    "invalidLanguage": "잘 못 선택했습니다. 언어를 다시 선택해주세요 [1] 영어, [2] 한국어",
+    "languageConfirmation": "한국어 선택했습니다",
+    "firstNumber": "첫번째 번호가 무엇입니까?",
+    "secondNumber": "두번째 번호가 무엇입니까?",
+    "invalidNumber": "올마른 번호가 아닙니다. 다른 번호를 써주세요.",
     "answer": "답:",
     "operationInput": "연산을 써주세요.\n (1) 추가, (2) 빼냄, (3) 증가, (4) 나누기 (5) 나머지",
     "invalidOperation": "입력이 잘못되었습니다. 올바른 수학 연산을 입력하십시오.\n(1) 덧셈, (2) 뺄셈, (3) 곱셈, (4) 나눗셈, (5) 나머지",
-    "playAgain": "다시 플레이하시겠습니까? 플레이 할 경우 'y'로 대답하십시오."
+    "stopPlaying": "그만 플레이하시겠습니까? 플레이 할 경우 'n'로 대답하십시오. Press 'n' or 'no' to stop playing"
   }
   
 }

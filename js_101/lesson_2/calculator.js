@@ -1,164 +1,201 @@
-// #region[TOC]
-/*
-A - ESLINT PROBS
-B - NOTEPAD
-
-00 - EXTERNAL MODULES/FILES
-01 - HELPER FNS
-02 - CALC PROGRAM
+// #region[A] OVERVIEW
+/**
+ *
+ *
+ *
 */
 
-// #endregion[TOC]
 
-// #region[A] ESLINT PROBS
-/* eslint-disable max-statements */
-/* eslint-disable max-lines-per-function */
 // #endregion[A]
 
-// #region[B] NOTEPAD
+// #region[B] PRIMING
 /*
---- LEGEND
-@@ = START, STOP
-[] = Processing Step
-  • Var Declaration,Assignment, Reassignment
-  • Value Transformation, Iteration, Type Conversion
-\\ = Input, Output
-<> = Decision/Conditional/
--- = Yes/No Decision Branches
-() = Connector
-~~ = loop block
-__ = generic grouping
-fn = function
+=================================================================
+[I] PROBLEM
+=================================================================
+- Inputs: {number, number, string}: string = operation to perform
+- Output: {number} calcResult
 
+__ ADDITIONAL DETAILS
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+- valid operations are add, subtract, multiply, divide
+- want to get inputs dynamically from the user
+- need to convert operands into number
 
---- ROUGH PSEUDOCODE/MENTAL MODEL
-@@ START
-00 Ask the user for the first number.
-01 Ask the user for the second number.
-02 Ask the user for an operation to perform.
-03 Perform the operation on the two numbers.
-04 Print the result to the terminal.
-@@ STOP
+=================================================================
+[II] EXAMPLES/EDGE CASES
+=================================================================
+__ BASIC OPERATIONS
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+calculateOperation(1,1,'+') // 2
+calculateOperation(4,3,'*') // 12
 
+__ EDGE CASES
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+- floats?  calculateOperation(1.23, 3.23, '+') // 4.46
+- invalid number?  calculateOperation('string', 'string', '-')
+- invalid operator?  calculateOperation(1,1,3)
 
---- MAIN FLOWCHART
-@START@
-__ Z
-- \\ Output: Welcome Users to App
-~~ Play Again Loop
-  ~~ A Loop
-  01 \\ Input: 1st Number
-  02 <> Check Validity of number 1
-    -- True fn isInvalid => A
-    -- False fn isinvalid => B
-  ~~ B Loop
-  01 \\ Input: 2nd Number
-  02 <> Check Validity of number 2
-    -- True fn isInvalid => B
-    -- False fn isInvalid => C
-  ~~ C Loop
-  01 \\ Input: Operator
-  02 <> Check Validity of Operator
-    -- True fn isInvalidOperator => C
-    -- False fn isInvalidOperator => D
-  __ D Loop
-  01 [] result = num1 (operation) num2
-  02 \\ Output result
-  03 \\ Input play again?
-  04 <> Check answer of Play Again (03)
-    -- True: Start Play Again Loop. Back to A
-    -- False: STOP
-@STOP@
+=================================================================
+[III] DATA STRUCTURES
+=================================================================
+- json (messages) to hold messages that will be outputted to the user
+- validOperations = {array}
 */
 // #endregion[B]
 
-// #region[00] EXTERNAL MODULES/FILES
-let messages = require('./calculator-messages.json');
-let readline = require('readline-sync');
+// #region[C] ALGORITHM
+/*
+=================================================================
+[I] SETUP
+=================================================================
++ SET readline = require('./readline-sync);
+  * gives input capabilities
++ IMPORT calculator_messages.json to hold all calculator messages
+
+=================================================================
+[II] UX ENHANCEMENTS
+=================================================================
+* greet user, say goodbye
+* specify when there is an error and how to fix it
+* distinguish between output messages and areas for user input
+* allow user to choose between languages
+
+=================================================================
+[III] MAIN PROGRAM
+=================================================================
+__ NUM 1
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+- 01 GET input {string} from user 1st number
++ 02 SET number1 = Number(input)
+~ 03 WHILE (number1 is NaN)
+  - GET input from user 1st number
+  + SET number1 = Number(input)
+
+__ NUM 2
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+* Perform 01-03 for number2 variable
+
+__ OPERATIONS
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+- GET input {string} for operation from user
++ SET operation = input
+~ WHILE (operation is invalid)
+  * check against validOperations array
+  - GET input {string} for operation from user
+  + SET operation = input
+
+__ PERFORM OPERATIONS
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+^ IF (operation is '+')
+  - PRINT number1 + number2
+^ ELSE IF (operation is '-')
+  - PRINT number1 - number2
+^ ELSE IF (operation is '/')
+  - PRINT number1 / number 2
+^ ELSE IF (operation is '*')
+  - PRINT number1 * number 2
+*/
+// #endregion[C]
+
+// #region[00] SETUP
+const readline = require('readline-sync');
+const MESSAGES = require('./calculator_messages.json');
+const VALID_OPERATIONS = ['1', '2', '3', '4', '5'];
+const VALID_LANGUAGES = ['en', 'ko'];
+let play = 'yes';
+let defaultLanguage;
 // #endregion[00]
 
 // #region[01] HELPER FNS
-function getMessages(lang = 'en', message) {
-  return messages[lang][message];
+// UX ENHANCEMENTS
+// =================================================================
+function getMessage(message, language = defaultLanguage ?? 'en') {
+  return MESSAGES[language][message];
 }
 
+function displayMessage(message, ...moreMessages) {
+  message = getMessage(message);
+  console.log(`=> ${message}${moreMessages}`);
+}
+
+function printResult(result) {
+  console.log(`${getMessage('answer')} ${result}`);
+}
+
+function changeLanguage(language) {
+  language = Number(language) - 1;
+  return VALID_LANGUAGES[Number(language)];
+}
+
+// VALIDATION & ERROR CHECKING
+// =================================================================
 function isInvalidNumber(number) {
-  return number === '' || Number.isNaN(+number);
+  return Number.isNaN(Number(number)) || number.trimStart() === '';
 }
 
-function prompt(message) {
-  console.log(`=> ${message}`);
-}
+// MAIN ACTION
+// =================================================================
+function calculate(number1, number2, operation) {
+  number1 = Number(number1);
+  number2 = Number(number2);
 
-function printResult(output) {
-  console.log(`${getMessages('en', 'answer')} ${output}`);
+  switch (operation) {
+    case '1':
+      return number1 + number2;
+    case '2':
+      return number1 - number2;
+    case '3':
+      return number1 * number2;
+    case '4':
+      return number1 / number2;
+    case '5':
+      return number1 % number2;
+  }
 }
 // #endregion[01]
 
-// #region[02] CALC PROGRAM
-function calculator() {
-  prompt(getMessages('en', 'firstQuestion'));
-  let number1 = readline.question();
-  console.log(number1);
+// #region[02] MAIN PROGRAM
 
+while (true) {
+  displayMessage('welcome');
+  displayMessage('chooseLanguage');
+  defaultLanguage = changeLanguage(readline.question());
+
+  while (!VALID_LANGUAGES.includes(defaultLanguage)) {
+    displayMessage('invalidLanguage');
+    defaultLanguage = changeLanguage(readline.question());
+  }
+  displayMessage('languageConfirmation');
+
+  displayMessage('firstNumber');
+  let number1 = readline.question();
   while (isInvalidNumber(number1)) {
-    prompt(getMessages('en', 'invalidNumber'));
+    displayMessage('invalidNumber');
     number1 = readline.question();
   }
 
-  prompt(getMessages('en', 'secondQuestion'));
+  displayMessage('secondNumber');
   let number2 = readline.question();
   while (isInvalidNumber(number2)) {
-    prompt(getMessages('en', 'invalidNumber'));
+    displayMessage('invalidNumber');
     number2 = readline.question();
   }
 
-  prompt(getMessages('en', 'operationInput'));
+  displayMessage('operationInput');
   let operation = readline.question();
-
-  while (
-    !['1', '2', '3', '4', '5', '+', '-', '*', '/', '5'].includes(operation)
-  ) {
-    prompt(getMessages('en', 'invalidOperation'));
-    operation = readline.question();
+  while (!VALID_OPERATIONS.includes(operation)) {
+    displayMessage('invalidOperation');
+    operation = readline.question(MESSAGES.invalidOperation);
   }
 
-  switch (operation) {
-    case '+':
-    case '1':
-      printResult(Number(number1) + Number(number2));
-      break;
-    case '-':
-    case '2':
-      printResult(Number(number1) - Number(number2));
-      break;
-    case '*':
-    case '3':
-      printResult(Number(number1) * Number(number2));
-      break;
-    case '/':
-    case '4':
-      printResult(Number(number1) / Number(number2));
-      break;
-    case '%':
-    case '5':
-      printResult(Number(number1) % Number(number2));
-      break;
-    case '**':
-    case '6':
-      printResult(Number(number1) ** Number(number2));
-      break;
-  }
+  let result = calculate(number1, number2, operation);
+  printResult(result);
 
-  prompt(getMessages('en', 'playAgain'));
-  let playAgain = readline.question().toLowerCase();
-  let validResponses = ['yes', 'y', 'ok', 'ye'];
-
-  if (validResponses.includes(playAgain) ) {
-    calculator();
-  }
-
+  displayMessage('stopPlaying');
+  play = readline.question();
+  if (play === 'no' || play === 'n') break;
+  console.clear();
 }
-// #endregion[02]
 
-calculator();
+// #endregion[03]
