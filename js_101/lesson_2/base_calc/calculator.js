@@ -1,7 +1,7 @@
 // #region[00] SETUP
 const readline = require('readline-sync');
 const MESSAGES = require('./calculator_messages.json');
-const VALID_OPERATIONS = ['1', '2', '3', '4', '5'];
+const VALID_OPERATIONS = ['1', '2', '3', '4'];
 const VALID_LANGUAGES = ['en', 'ko'];
 let play = 'yes';
 let defaultLanguage;
@@ -16,16 +16,16 @@ function getMessage(message, language = defaultLanguage ?? 'en') {
 
 function displayMessage(message, ...moreMessages) {
   message = getMessage(message);
-  console.log(`=> ${message}${moreMessages}`);
+  console.log(`=> ${message} ${moreMessages}`);
 }
 
 function printResult(result) {
-  console.log(`${getMessage('answer')} ${result}`);
+  displayMessage('answer', result);
 }
 
-function changeLanguage(language) {
-  language = Number(language) - 1;
-  return VALID_LANGUAGES[Number(language)];
+function changeLanguage(index) {
+  index = Number(index) - 1;
+  return VALID_LANGUAGES[index];
 }
 
 // VALIDATION & ERROR CHECKING
@@ -37,21 +37,22 @@ function isInvalidNumber(number) {
 // MAIN ACTION
 // =================================================================
 function calculate(number1, number2, operation) {
-  number1 = Number(number1);
-  number2 = Number(number2);
-
+  let output;
   switch (operation) {
     case '1':
-      return number1 + number2;
+      output = `${number1} + ${number2} = ${number1 + number2}`;
+      break;
     case '2':
-      return number1 - number2;
+      output = `${number1} - ${number2} = ${number1 - number2}`;
+      break;
     case '3':
-      return number1 * number2;
+      output = `${number1} * ${number2} = ${number1 * number2}`;
+      break;
     case '4':
-      return number1 / number2;
-    case '5':
-      return number1 % number2;
+      output = `${number1} / ${number2} = ${number1 / number2}`;
+      break;
   }
+  return output;
 }
 // #endregion[01]
 
@@ -89,7 +90,7 @@ while (true) {
     operation = readline.question(MESSAGES.invalidOperation);
   }
 
-  let result = calculate(number1, number2, operation);
+  let result = calculate(Number(number1), Number(number2), operation);
   printResult(result);
 
   displayMessage('stopPlaying');
