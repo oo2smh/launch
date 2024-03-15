@@ -1,12 +1,12 @@
 {
   "en": {
-    "welcome": "Welcome to the Calculator Program! This program allows you to perform addition, subtraction, multiplication and division.",
+    "welcome": "Welcome to the Calculator Program! This program allows you to perform addition, subtraction, multiplication and division on integers.",
     "chooseLanguage": "Choose your language [1] English, [2] Korean",
     "invalidLanguage": "That's an invalid response. Please choose [1] English or [2] Korean",
     "languageConfirmation": "You have chosen English as your default language",
     "firstNumber": "1. What is the first number?",
     "secondNumber": "2. What is the second number?",
-    "invalidNumber": "That is not a valid number. Please enter a valid number.",
+    "invalidNumber": "That is not a valid number. Please enter a valid number. Integers only.",
     "answer": "Answer:",
     "operationInput": "Please enter a mathematical operation.\n (1) Addition +, (2) Subtraction - , (3) Multiplication *, (4) Division /",
     "invalidOperation": "Invalid input. Please enter a valid mathematical operation.\n (1) Addition, (2) Subtraction, (3) Multiplication, (4) Division.",

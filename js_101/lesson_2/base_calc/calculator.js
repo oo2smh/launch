@@ -31,7 +31,9 @@ function changeLanguage(index) {
 // VALIDATION & ERROR CHECKING
 // =================================================================
 function isInvalidNumber(number) {
-  return Number.isNaN(Number(number)) || number.trimStart() === '';
+  return Number.isNaN(Number(number))
+  || !Number.isInteger(Number(number))
+  || number.trim() === '';
 }
 
 // MAIN ACTION
@@ -57,7 +59,6 @@ function calculate(number1, number2, operation) {
 // #endregion[01]
 
 // #region[02] MAIN PROGRAM
-
 while (true) {
   displayMessage('welcome');
   displayMessage('chooseLanguage');
@@ -98,5 +99,4 @@ while (true) {
   if (play === 'no' || play === 'n') break;
   console.clear();
 }
-
 // #endregion[03]
