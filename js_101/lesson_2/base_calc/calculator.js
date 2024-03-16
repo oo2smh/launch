@@ -3,14 +3,13 @@ const readline = require('readline-sync');
 const MESSAGES = require('./calculator_messages.json');
 const VALID_OPERATIONS = ['1', '2', '3', '4'];
 const VALID_LANGUAGES = ['en', 'ko'];
-let play = 'yes';
-let defaultLanguage;
+let defaultLanguage = 'en';
 // #endregion[00]
 
 // #region[01] HELPER FNS
 // UX ENHANCEMENTS
 // =================================================================
-function getMessage(message, language = defaultLanguage ?? 'en') {
+function getMessage(message, language = defaultLanguage) {
   return MESSAGES[language][message];
 }
 
@@ -73,6 +72,7 @@ while (true) {
   displayMessage('firstNumber');
   let number1 = readline.question();
   while (isInvalidNumber(number1)) {
+    console.clear();
     displayMessage('invalidNumber');
     number1 = readline.question();
   }
@@ -80,6 +80,7 @@ while (true) {
   displayMessage('secondNumber');
   let number2 = readline.question();
   while (isInvalidNumber(number2)) {
+    console.clear();
     displayMessage('invalidNumber');
     number2 = readline.question();
   }
@@ -87,6 +88,7 @@ while (true) {
   displayMessage('operationInput');
   let operation = readline.question();
   while (!VALID_OPERATIONS.includes(operation)) {
+    console.clear();
     displayMessage('invalidOperation');
     operation = readline.question(MESSAGES.invalidOperation);
   }
@@ -95,7 +97,7 @@ while (true) {
   printResult(result);
 
   displayMessage('stopPlaying');
-  play = readline.question();
+  let play = readline.question().toLowerCase();
   if (play === 'no' || play === 'n') break;
   console.clear();
 }

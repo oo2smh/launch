@@ -10,7 +10,7 @@
     "answer": "Answer:",
     "operationInput": "Please enter a mathematical operation.\n (1) Addition +, (2) Subtraction - , (3) Multiplication *, (4) Division /",
     "invalidOperation": "Invalid input. Please enter a valid mathematical operation.\n (1) Addition, (2) Subtraction, (3) Multiplication, (4) Division.",
-    "stopPlaying": "Do you want to stop playing? To stop play, answer with a 'no' Otherwise press 'Enter' to play again."
+    "stopPlaying": "Do you want to stop playing? To stop play, answer with a 'no' Otherwise press any key to play again."
   },
   "ko": {
     "welcome": "계산기에 반갑습니다",
@@ -23,6 +23,6 @@
     "answer": "답:",
     "operationInput": "연산을 써주세요.\n (1) 추가 +, (2) 빼냄 -, (3) 증가 *, (4) 나누기 /",
     "invalidOperation": "입력이 잘못되었습니다. 올바른 수학 연산을 입력하십시오.\n(1) 덧셈 +, (2) 뺄셈 -, (3) 곱셈 *, (4) 나눗셈 /",
-    "stopPlaying": "그만 플레이하시겠습니까? 플레이 할 경우 'n'/'no'로 대답하십시오."
+    "stopPlaying": "그만 플레이하시겠습니까? 플레이 할 경우 'n'/'no'로 대답하십시오. 다시 플레이하고 싶으시면 아무 키를 눌러주세요"
   }
 }
