@@ -1,0 +1,9 @@
+{
+  "welcome": "Welcome to the mortgage calculator 👋. This program calculates your monthly payment and total interest incrued to pay off your loan.We will need a Loan Amount, Annual Percentage Rate (APR) and the loan duration. Press any key to get started",
+  "askLoanAmount": "Please enter a Loan Amount. Enter in a positive integer greater than 0. Remove any special characters such as , or $. Valid responses include 100000, 20000.",
+  "askLoanDuration": "Please enter a duration for your loan (The time duration you want to pay back your loans in years. Only enter positive integers.",
+  "askAPR": "Please enter the Annual Percentage Rate (APR). You may enter up to 2 decimal points. For instance 25 for 25%. You can put up to two decimals 25.25 for instance. However, the response will be truncated to the hundreth decimal point. Ex: 12.5555 => 12.55",
+  "invalidNumber": "Invalid input. Please enter a positive number. You may use up 2 decimal points. Valid responses include (1,2,3, 3.25, etc). All subsequent digits will be truncated. 23.235 => 23.23",
+  "invalidInteger": "Invalid input. Please enter a positive integer. Valid responses include (1,2,3, etc)",
+  "playAgain": "Would you like to stop playing? Press 'n' or 'no' to stop playing. Otherwise, press any key to play again."
+}
