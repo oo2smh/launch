@@ -1,0 +1,12 @@
+{
+  "welcome": "Welcome to a variation of the traditional rock, paper, scissors game. There are 5 options (rock, paper, scissors, lizard, and spock). \nYou will be playing against the computer. 1st one to 3 points wins! Good luck!\n",
+  "rules": "RULES:\n- ROCK (1,r) ----- 🪨  beats ✂️  & 🦎\n- PAPER (2,p) ----- 📄 beats 🪨  & 👽\n- SCISSORS (3,sc) ----- ✂️  beats 📄 & 🦎\n- LIZARD (4,l) -----  🦎 beats 📄 & 👽\n- SPOCK (5, sp) -----  👽 beats 🪨  & ✂️",
+  "userChoice": "Enter a choice. Valid responses are enclosed in ( ).\nROCK = (1, r) -- PAPER = (2, p) -- SCISSORS = (3, sc) -- LIZARD = (4, l) -- SPOCK = (5, sp)",
+  "invalidChoice": "That's not a valid choice. Please try again.",
+  "stalemate": "Stalemate. It's a tie",
+  "userWins": "Congrats!! You win",
+  "computerWins": "You lost. The Computer wins",
+  "nextRound": "Press any key to go to the next round",
+  "stopPlaying": "Stop playing? Enter 'y/yes' to stop playing or press any other key to continue playing", 
+  "endOfGame": "Game is over"
+}
