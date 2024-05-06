@@ -1,10 +1,8 @@
 /*
-{string} -> {boolean}
-Is string palindrome?
-* Palindrome: same word reversed
-* empty str?
-* case matters
-* all characters matters (including whitespace)
+  COMPARISON PROBLEM
+    * This type of prob involves manipulating one or both values and comparing
+      them
+    * It returns a boolean. Predicate function
 */
 
 function isPalindrome(str) {
@@ -21,6 +19,35 @@ function isRealPalindrome(str) {
 }
 
 function isPalindromicNumber(integer) {
-  let reversedInteger = integer.toString().split('').reverse().join('');
+  let reversedInteger = String(integer).split('').reverse().join('');
   return String(integer) === reversedInteger;
 }
+
+/* ****************
+TEST CASES
+*******************/
+console.log(
+  'isPalindrome\n',
+  isPalindrome('madam') === true,
+  isPalindrome('Madam') === false,
+  isPalindrome("madam i'm adam") === false,
+  isPalindrome('356653') === true,
+);
+
+console.log(
+  'isRealPalindrome\n',
+  isRealPalindrome('madam') === true,
+  isRealPalindrome('Madam') === true,
+  isRealPalindrome("Madam, I'm Adam") === true,
+  isRealPalindrome('356653') === true,
+  isRealPalindrome('356a653') === true,
+  isRealPalindrome('123ab321') === false,
+);
+
+console.log(
+  'isPalindromicNumber Fn\n',
+  isPalindromicNumber(34543) === true,
+  isPalindromicNumber(123210) === false,
+  isPalindromicNumber(22) === true,
+  isPalindromicNumber(5) === true,
+);

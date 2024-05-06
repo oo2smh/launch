@@ -1,53 +1,21 @@
 /*
-  * SET array to hold userInputs
-  * PROMPT user for 5 numbers
-  * STORE user inputs into array
-  * PROMPT user for last number
-  * CHECK if last number is inside array of user input
-    * PRINT message if true
-    * PRINT alternative message if false
-
-%%%%%%%%%%%%%%%%%%%%%%%
-LESSONS
-%%%%%%%%%%%%%%%%%%%%%%%
-- If you need to store a list of something, put it in an empty array
-  * Having data in a data structure allows for easier manipulation,
-    searching/filtering, transforming
-- PEDAC doesn't work 100% here, because there is no input, but the basic idea
-  stands
-- Don't get bogged down by extracting logic into functions right away
-  * You can optimize and refactor later
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-OTHER NOTES
-%%%%%%%%%%%%%%%%%%%%%%%%%
-- If user just enters, a 0 is pushed into the array
-  * Input validation might be needed
-- If the user puts in a non-Integer value, NaN gets pushed to the array
+  ITERATION/SEARCH PROBLEMS
+  - Involves iterating over a collection
+    ** Performing some kind of action with each iteration
+  - Then searching through a collection to retrieve a value 
 */
 
-// SETUP
 const readline = require('readline-sync');
-let userInputList = [];
+let numberTitle = ['1st', '2nd', '3rd', '4th', '5th', 'last'];
 
-function isNumberIncluded(num, list) {
-  return list.includes(num);
-}
+let userChosenNumbers = numberTitle.map(title => {
+  return readline.questionInt(`Enter the ${title} number:\n`);
+});
 
-//MAIN
-function getUserNumberFiveTimes() {
-  for (let count = 0; count < 5; count++) {
-    let userInput = Number(readline.question('Please enter a digit:\n'));
-    userInputList.push(userInput);
-  }
-}
+let lastNumber = userChosenNumbers.pop();
 
-getUserNumberFiveTimes();
-
-// NUMBER CHECK
-let chosenNum = Number(readline.question('Please enter a digit to check if it\'s included in your list:\n'));
-if (isNumberIncluded(chosenNum, userInputList)) {
-  console.log(`The number ${chosenNum} appears in ${userInputList.join()}`);
+if (userChosenNumbers.includes(lastNumber)) {
+  console.log(`The number ${lastNumber} appears in ${userChosenNumbers.join()}.`);
 } else {
-  console.log(`The number ${chosenNum} does not appear in ${userInputList.join()}`);
+  console.log(`The number ${lastNumber} does not appear in ${userChosenNumbers.join()}.`);
 }
