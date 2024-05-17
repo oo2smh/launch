@@ -38,12 +38,6 @@ function swap(str) {
     .join(" ");
 }
 
-console.log({
-  1: swap("Oh what a wonderful day it is"), // "hO thaw a londerfuw yad ti si"
-  2: swap("Abcde"), // "ebcdA"
-  3: swap("a"), // "a"
-});
-
 function swap2(str) {
   return str
     .split(" ")
@@ -55,12 +49,6 @@ function swap2(str) {
     })
     .join(" ");
 }
-
-console.log({
-  1: swap2("Oh what a wonderful day it is"), // "hO thaw a londerfuw yad ti si"
-  2: swap2("Abcde"), // "ebcdA"
-  3: swap2("a"), // "a"
-});
 
 function swap3(str) {
   return str
@@ -77,7 +65,13 @@ function swap3(str) {
 }
 
 console.log({
-  1: swap3("Oh what a wonderful day it is"), // "hO thaw a londerfuw yad ti si"
-  2: swap3("Abcde"), // "ebcdA"
-  3: swap3("a"), // "a"
+  "1a": swap("Oh what a wonderful day it is"), // "hO thaw a londerfuw yad ti si"
+  "1b": swap("Abcde"), // "ebcdA"
+  "1c": swap("a"), // "a"
+  "2a": swap2("Oh what a wonderful day it is"), // "hO thaw a londerfuw yad ti si"
+  "2b": swap2("Abcde"), // "ebcdA"
+  "2c": swap2("a"), // "a"
+  "3a": swap3("Oh what a wonderful day it is"), // "hO thaw a londerfuw yad ti si"
+  "3b": swap3("Abcde"), // "ebcdA"
+  "3c": swap3("a"), // "a"
 });

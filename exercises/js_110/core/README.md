@@ -13,6 +13,10 @@ FileName + Set: Multiproblem file
 ```
 
 ## PROBLEM DESCRIPTION
+Below is a problems tracker. After each question, the first () groups the
+general pattern(s) used to solve the problem. The second parenthesis groups new,
+useful syntax or tools that can be used to solve the problem.
+
 ```yaml
 # USER ACTION
 (*): revisit
@@ -31,12 +35,13 @@ filt: filter
 # PROBLEMS
 <!--===================-->
 ```yaml
-( ) e4-search101: [loop-iter, mid-array, readline]
-( ) e4-palindromeSet(3): [mid-array, regex, string-validation]
-( ) e4-runningTotal: [mid-accum, loop-tran]
-(*) e4-letterCounterSet(2): [mid-dict, loop-tran]
-(*) e4-letterSwap: [loop-tran, slice, destructuring]
-(*) e4-conversionSet(4): [mid-dict, mid-accumulator, math-logic, mid-boolean]
+( ) e4-search101: (loop-iter, mid-array), (readline.questionInt())
+( ) e4-palindromeSet(3): (mid-array, string-validation), (regex)
+( ) e4-runningTotal: (mid-accum, loop-tran)
+(*) e4-letterCounterSet(2): (mid-dict, loop-tran)
+(*) e4-letterSwap: (loop-tran), (slice, destructuring syntax swap)
+(*) e4-conversionSet(4): (mid-dict, mid-accumulator, math-logic, mid-boolean),
+(Math.trunc(num), Math.floor(num), Math.sign(num))
 
 (*) e5-cuteAngles:
 ( ) e5-comboSet(2):

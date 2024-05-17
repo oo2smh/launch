@@ -14,6 +14,7 @@ function wordSizes(str) {
   return countFrequency(arrayOfLengths);
 }
 
+// SUBPROCESS
 function countFrequency(array) {
   let frequencyCounter = {};
   array.forEach((length) => {

@@ -7,7 +7,9 @@ from the original array.
 /*
 INPUT: {array(nums)} arrayOfNums OUTPUT: {array(nums)} runningTotals RULES
 - Running Total = sum of adding the current elem with the previous accumulated
-sum - Empty array -> returns empty array ------------------------- PROCESS
+sum - Empty array -> returns empty array
+-------------------------
+PROCESS
 * SET currentSum = 0; TRAVERSE each i in array
   + SET currentSum += i + TRANSFORM each elem of array to currentSum
 * RETURN transformed array
