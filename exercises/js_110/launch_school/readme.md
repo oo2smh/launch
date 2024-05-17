@@ -1,11 +1,11 @@
 # LEGEND
-============================
+<!--==================-->
 ## FILE NAMES
 ```yaml
-E(#): Easy(#)
+E#: Easy(#)
 LP: List Processing
 SP: String Processing
-M(#): Medium(#)
+M#: Medium(#)
 A1: Advanced 1
 DB: Debugging
 IP: Interpretative Problem-Solving
@@ -29,10 +29,10 @@ filt: filter
 ```
 
 # PROBLEMS
-============================
+<!--===================-->
 ```yaml
 ( ) e4-search101: [loop-iter, mid-array, readline]
-( ) e4-palindromeSet: [mid-array, regex, string-validation]
+( ) e4-palindromeSet(3): [mid-array, regex, string-validation]
 ( ) e4-runningTotal: [mid-accum, loop-tran]
 (*) e4-letterCounterSet(2): [mid-dict, loop-tran]
 (*) e4-letterSwap: [loop-tran, slice, destructuring]
@@ -113,14 +113,14 @@ filt: filter
 ```
 
 # RANDOM NOTES
-============================
+<!--==================-->
 - Object: to keep a running tracker
 - Object: to keep a static referencer
 - Types of Intermediate-Variables
   - Accumulator `sum, result = '', result = []`
 
 # ELEGANT SYNTAX
-============================
+<!--==================-->
 ```js [Destructuring Swap]
 let a = 1, let b = 2;
 [a,b] = [b,a]  // b === 1, a === 2
