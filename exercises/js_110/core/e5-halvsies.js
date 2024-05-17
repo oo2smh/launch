@@ -23,7 +23,6 @@ function halvsies(array) {
   let newArray = [];
   newArray = [array.slice(0, midpoint), array.slice(midpoint)];
   return newArray;
-  // console.log(midpoint);
 }
 
 // # TESTS
