@@ -1,11 +1,21 @@
 /* #1 MULTIPLICATIVE AVERAGE
-INPUT: {arr(int)} OUTPUT: {str} multiples all input integers together, divides
+INPUT: {arr(int)}
+OUTPUT: {str} multiples all input integers together, divides
 result by the number of array entries, returns the str with values rounded to
-three decimal places RULES - Appears that all elems from ex are +int DS - {num}
-currentProduct (accum var) ================================ PROCESS SET
-currentProduct = 1 TRAVERSE each (i-elem) of array SET currentProduct *= i-elem
-CALCULATE division of currentProduct / array.length ROUND and FORMAT to
-3 decimal points CONVERT to string RETURN string
+three decimal places
+RULES
+- Appears that all elems from ex are +int
+DS
+- {num} currentProduct (accum var)
+================================
+PROCESS
+  SET currentProduct = 1
+  TRAVERSE each (i-elem) of array
+  SET currentProduct *= i-elem
+  CALCULATE division of currentProduct / array.length
+  ROUND and FORMAT to 3 decimal points
+  CONVERT to string
+  RETURN string
 */
 
 // ****************************************************'
@@ -14,7 +24,8 @@ INPUT: {arr(+int)} arr1, {arr{+int}} arr2
 OUTPUT: {arr} product of each pair of num from the same idx
 RULES
 - Each elem has same amt of length
-GOAL: Multiply each elem of the same idx and add them to the new array. Return the new array
+GOAL: Multiply each elem of the same idx and add them to the new array.
+Return the new array
 =========================================================
 DS
 - {arr} newArray (holds product numbers)
