@@ -2,15 +2,16 @@
 <!--==================-->
 ## FILE NAMES
 ```yaml
-E#: Easy(#)
+E#: Easy#
 LP: List Processing
 SP: String Processing
-M#: Medium(#)
+M#: Medium#
 A1: Advanced 1
 DB: Debugging
 IP: Interpretative Problem-Solving
 FileName + Set: Multiproblem file
 ```
+
 
 ## PROBLEM DESCRIPTION
 Below is a problems tracker. After each question, the first () groups the
@@ -35,23 +36,23 @@ filt: filter
 # PROBLEMS
 <!--===================-->
 ```yaml
-( ) e4-search101: (loop-iter, mid-array), (readline.questionInt())
-( ) e4-palindromeSet(3): (mid-array, string-validation), (regex)
-( ) e4-runningTotal: (mid-accum, loop-tran)
-(*) e4-letterCounterSet(2): (mid-dict, loop-tran)
-(*) e4-letterSwap: (loop-tran), (slice, destructuring syntax swap)
-(*) e4-conversionSet(4): (mid-dict, mid-accumulator, math-logic, mid-boolean),
+( ) e4-search101: (loop/iter, mid/array), (readline.questionInt())
+( ) e4-palindromeSet(3): (mid/array, string-validation), (regex)
+( ) e4-runningTotal: (mid/accum, loop/tran)
+(*) e4-letterCounterSet(2): (mid/dict/tracker, loop-tran)
+(*) e4-letterSwap: (loop/tran), (slice, destructuring-swap  )
+(*) e4-conversionSet(4): (mid/dict/reference, mid/accum, math-logic, mid/boolean),
 (Math.trunc(num), Math.floor(num), Math.sign(num))
 
-(*) e5-cuteAngles:
-( ) e5-comboSet(2):
-( ) e5-halvsies:
-( ) e5-dupes:
-( ) e5-multiplySet(2):
-( ) e5-digitsList:
-( ) e5-howMany:
-( ) e5-arrayAverage:
-( ) e5-midnightSet(2):
+(*) e5-cuteAngles: (math-logic), (Math.trunc(num), Math.sign(num))
+( ) e5-comboSet(2): (mid/array), (..args, spread, set)
+( ) e5-halvsies: (mid/arr), (slice)
+( ) e5-dupes: (mid/dict/tracker), (sort)
+( ) e5-multiplySet(2): (reduce, map)
+( ) e5-digitsList: (typeConversions), (map)
+( ) e5-howMany: (mid/dict/tracker), (for..of, for..in)
+( ) e5-arrayAverage: (reduce, Math.trunc(num))
+(*) e5-midnightSet(2): (math-logic)
 
 ( ) e6-doubleCharSet(2):
 ( ) e6-reverseSet(4):
