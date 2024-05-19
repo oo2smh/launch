@@ -2,10 +2,10 @@
 <!--==================-->
 ## FILE NAMES
 ```yaml
-E#: Easy#
+E#: Easy(#)
 LP: List Processing
 SP: String Processing
-M#: Medium#
+M#: Medium(#)
 A1: Advanced 1
 DB: Debugging
 IP: Interpretative Problem-Solving
@@ -44,15 +44,15 @@ filt: filter
 (*) e4-conversionSet(4): (mid/dict/reference, mid/accum, math-logic, mid/boolean),
 (Math.trunc(num), Math.floor(num), Math.sign(num))
 
-(*) e5-cuteAngles: (math-logic), (Math.trunc(num), Math.sign(num))
+(*) e5-cuteAngles: (mathLogic), (Math.trunc(num), Math.sign(num))
 ( ) e5-comboSet(2): (mid/array), (..args, spread, set)
 ( ) e5-halvsies: (mid/arr), (slice)
 ( ) e5-dupes: (mid/dict/tracker), (sort)
 ( ) e5-multiplySet(2): (reduce, map)
 ( ) e5-digitsList: (typeConversions), (map)
 ( ) e5-howMany: (mid/dict/tracker), (for..of, for..in)
-( ) e5-arrayAverage: (reduce, Math.trunc(num))
-(*) e5-midnightSet(2): (math-logic)
+( ) e5-arrayAverage:
+(*) e5-midnightSet(2): (mathLogic) (destructuring, Date, modulus, Unitconversions)
 
 ( ) e6-doubleCharSet(2):
 ( ) e6-reverseSet(4):
