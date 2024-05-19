@@ -3,11 +3,11 @@ INPUT: {arr(int)}
 OUTPUT: {int} average of all the integers in array
 RULES
 - AVERAGE = sum of all elems / number of elems
-- array will never be empty
-- numbers will always be a positive int
-- No need to worry about input validation
-- Round to Nearest integer
-PROCESS
+    - array will never be empty
+    - numbers will always be a positive int
+    - No need to worry about input validation
+    - Round to Nearest integer
+    PROCESS
   USE reduce
 */
 
