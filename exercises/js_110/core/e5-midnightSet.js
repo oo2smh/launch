@@ -48,7 +48,6 @@ function timeOfDay(deltaMinutes) {
 
   return `${hours}:${minutes}`;
 }
-
 function getMinutesInRange(deltaMinutes) {
   while (deltaMinutes > MINUTES_IN_DAY) {
     deltaMinutes -= MINUTES_IN_DAY;
@@ -85,11 +84,82 @@ function timeOfDayWithDate(deltaMinutes) {
 
   hours = addLeadingZeroes(time.getHours());
   minutes = addLeadingZeroes(time.getMinutes());
-
   return `${hours}:${minutes}`;
 }
 
+/* MIDNIGHT #2
+INPUT: {string} 24 hour notation time
+OUTPUT: {int} minutes before or after midnight [0, 1439]
+RULES:
+- hours can be reprsented by both 0 and 24 (guard clause)
+  - if it's 24, change it to 0
+GOAL: Write 2 fns before/after midnight that returns deltaMinutes before/after
+midnight
+
+=======================
+DS
+======================
+** midnight can be represented as both 00:00 and 24:00. For the before midnight,
+it should be represented as 24:00. And after midnight it should be represented
+as 00:00
+
+PROCESS (@beforeMidnight)
+* @param {string} notationTime
+  SET startPoint = 24
+  EXTRACT hours
+  EXTRACT minutes
+  IF hours = 24 => change hours into 0
+  CALCULATE the diff from startPoint to currentInput time
+    - CONVERT both to same units (minutes)
+    - MULTIPLY startPoint * MINUTES_IN_HOUR
+    - MULTIPLY inputHour * MINUTES_IN_HOUR + inputMinutes
+    - SUBTRACT startPoint(min) - inputTotal(min)
+  SET offsetTime = previous calculation
+  RETURN offsetTime
+
+PROCESS (@afterMidnight)
+* @param {string} notationTime
+  EXTRACT hours
+  EXTRACT minutes
+  IF hours = 24 => SET hours = 0
+  CONVERT inputTime into minutes
+  - CONVERT hours into minutes (MIN_IN_HOUR * hours)
+  - ADD inputMinutes to previousCalculation
+  RETURN totalMinutes
+*/
+
+function afterMidnight(time) {
+  let [hours, minutes] = extractTimeUnits(time);
+  if (hours === 24) hours = 0;
+  hours *= MINUTES_IN_HOUR;
+  return hours + minutes;
+}
+
+function beforeMidnight(time) {
+  let startPoint = HOURS_IN_DAY * MINUTES_IN_HOUR;
+  let [hours, minutes] = extractTimeUnits(time);
+  if (hours === 0) hours = 24;
+  hours *= MINUTES_IN_HOUR;
+  let totalInputMinutes = hours + minutes;
+  return startPoint - totalInputMinutes;
+}
+
+function extractTimeUnits(timeString) {
+  return timeString.split(":").map(Number);
+}
+
+console.log(extractTimeUnits("12:34"));
+
 // # TESTS
+function testfromMidnight() {
+  console.log(afterMidnight("00:00") === 0);
+  console.log(beforeMidnight("00:00") === 0);
+  console.log(afterMidnight("12:34") === 754);
+  console.log(beforeMidnight("12:34") === 686);
+  console.log(afterMidnight("24:00") === 0);
+  console.log(beforeMidnight("24:00") === 0);
+}
+
 function testTimeOfDay() {
   console.log(timeOfDay(0) === "00:00");
   console.log(timeOfDay(-3) === "23:57");
@@ -110,4 +180,4 @@ function testTimeOfDayWithDate() {
   console.log(timeOfDayWithDate(-4231) === "01:29");
 }
 
-testTimeOfDayWithDate();
+testfromMidnight();
