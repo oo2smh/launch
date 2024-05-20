@@ -2,8 +2,8 @@
 <!--==================-->
 ## FILE NAMES
 ```yaml
-E(#): Easy(#)
-M(#): Medium(#)
+E(num): Easy(num)
+M(num): Medium(num)
 A1: Advanced 1
 LP: List Processing
 SP: String Processing
