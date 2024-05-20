@@ -10,6 +10,11 @@ function swapName(fullName) {
   return `${lastName}, ${firstName}`;
 }
 
+function swapName1(fullName) {
+  return fullName.split(" ").reverse().join(" ");
+}
+
 console.log(
   swapName("Joe Roberts"), // "Roberts, Joe"
+  swapName1("Joe Roberts"),
 );
