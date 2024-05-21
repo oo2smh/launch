@@ -61,21 +61,21 @@ unitConversions)
 ( ) e6-sequenceCount: (mid/arr), (Array())
 ( ) e6-matchingParenthesis: (mid/toggle)
 
-( ) lp-sumsSet(2):
-( ) lp-alphabeticNumbers:
-( ) lp-multiplyPairs:
-( ) lp-substringSet(3):
-( ) lp-groceryList:
-( ) lp-inventorySet(2):
+( ) lp-sumsSet: (mid/accum, crissCrossVar)
+( ) lp-alphabeticNumbers: (mid/arr, conversion), (sort, indexOf)
+( ) lp-multiplyPairs: (mid/accum)
+( ) lp-substringSet(3): (mid/accum), (sort)
+( ) lp-groceryList: (mid/arr, nestedAccess), (destructuring param)
+( ) lp-inventorySet(2): (mid/accum, nestedAccess), (filter)
 
-( ) sp-uppercaseCheck:
-( ) sp-deleteVowels:
-( ) sp-lettercaseCounter:
-( ) sp-capitalizeWords:
-( ) sp-swapCase:
-( ) sp-staggeredCaseSet(2):
-( ) sp-howLong:
-( ) sp-searchWordSet(2):
+( ) sp-uppercaseCheck: (regex)
+( ) sp-deleteVowels: (mid/accum, regex)
+( ) sp-lettercaseCounter: (mid/dict/tracker), (regex, test)
+( ) sp-capitalizeWords: (slice)
+( ) sp-swapCase: (mid/accum)
+( ) sp-staggeredCaseSet(2): (idx, mid/toggle)
+( ) sp-howLong: (arguments.length)
+( ) sp-searchWordSet(2): (new Regex(search, flags))
 
 ( ) m1-rotationSet(3):
 ( ) m1-stackMachine:
