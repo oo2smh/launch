@@ -1,5 +1,4 @@
 # JS Book Exercises
-
 - Answers and explanations for certain problems will be put here. Most problems do not need an in-depth PEDAC explanation.
 
 ## Preparations
@@ -129,11 +128,11 @@ const names = [asta, butterscotch, pudding, neptune, darwin];
 
 ```js
 const pets = {
-	asta: 'dog',
-	butterscotch: 'cat',
-	pudding: 'cat',
-	neptune: 'fish',
-	darwin: 'lizard',
+  asta: 'dog',
+  butterscotch: 'cat',
+  pudding: 'cat',
+  neptune: 'fish',
+  darwin: 'lizard',
 };
 ```
 
@@ -158,7 +157,7 @@ const pets = {
 ```js
 let name = 'Victor';
 function greeter(greeting = 'Good Morning', name = 'Victor') {
-	console.log(`${greeting}, ${name}.`);
+  console.log(`${greeting}, ${name}.`);
 }
 
 greeter('Good Morning');
@@ -172,9 +171,9 @@ greeter('Good Evening');
 let my = 20;
 
 function calculateFuture() {
-	for (let futureTime = 10; futureTime <= 40; futureTime += 10) {
-		console.log(`In ${futureTime}, you will be ${futureTime + } years old.`);
-	}
+  for (let futureTime = 10; futureTime <= 40; futureTime += 10) {
+    console.log(`In ${futureTime}, you will be ${futureTime + } years old.`);
+  }
 }
 
 calculateFuture(my);
@@ -184,7 +183,7 @@ calculateFuture(my);
 
 ```js
 {
-	let foo = 'bar';
+  let foo = 'bar';
 }
 
 console.log(foo); // > ReferenceError, since foo is block-scoped. There is no declaration nor initialization of foo in the global scope
@@ -211,7 +210,7 @@ console.log('Good Evening, ' + NAME);
 ```js
 let foo = 'bar';
 {
-	let foo = 'qux';
+  let foo = 'qux';
 }
 
 console.log(foo); // 'bar'
@@ -244,7 +243,7 @@ let firstName = rlSync.question("What's your first name?");
 let lastName = rlSync.question("What's your last name?");
 
 function greeter(firstName, lastName) {
-	return `Hello ${firstName} ${lastName}!`;
+  return `Hello ${firstName} ${lastName}!`;
 }
 
 console.log(greeter(firstName, lastName));
@@ -257,9 +256,9 @@ let rlSync = require('readline-sync');
 let my = +rlSync.question("What's your ? ");
 
 function calculateFuture() {
-	for (let futureTime = 10; futureTime <= 40; futureTime += 10) {
-		console.log(`In ${futureTime}, you will be ${futureTime + } years old.`);
-	}
+  for (let futureTime = 10; futureTime <= 40; futureTime += 10) {
+    console.log(`In ${futureTime}, you will be ${futureTime + } years old.`);
+  }
 }
 
 console.log(calculateFuture(my));
@@ -272,7 +271,7 @@ console.log(calculateFuture(my));
 ```js
 let bar = 1;
 function foo() {
-	let bar = 2;
+  let bar = 2;
 }
 
 foo();
@@ -285,15 +284,15 @@ console.log(bar); // > 'bar' b/c this searches the global scope
 let rlSync = require('readline-sync');
 
 function getFirstName() {
-	return rlSync.question("What's your first name?");
+  return rlSync.question("What's your first name?");
 }
 
 function getLastName() {
-	return rlSync.question("What's your last name?");
+  return rlSync.question("What's your last name?");
 }
 
 function greeter() {
-	return `Hello ${getFirstName()} ${getLastName()}!`;
+  return `Hello ${getFirstName()} ${getLastName()}!`;
 }
 
 console.log(greeter());
@@ -305,10 +304,10 @@ console.log(greeter());
 let rlSync = require('readline-sync');
 
 function multiply() {
-	let a = rlSync.question('Enter the first number');
-	let b = rlSync.question('Enter the second number');
-	console.log(a * b);
-	return a * b;
+  let a = rlSync.question('Enter the first number');
+  let b = rlSync.question('Enter the second number');
+  console.log(a * b);
+  return a * b;
 }
 
 multiply();
@@ -318,9 +317,9 @@ multiply();
 
 ```js
 function scream(words) {
-	words = words + '!!!!';
-	return;
-	console.log(words);
+  words = words + '!!!!';
+  return;
+  console.log(words);
 }
 
 scream('Yipeee'); // it logs nothing to do console since the return exits the fn and the following console.log isn't ran
@@ -330,7 +329,7 @@ scream('Yipeee'); // it logs nothing to do console since the return exits the fn
 
 ```js
 function scream(words) {
-	return words + '!!!!';
+  return words + '!!!!';
 }
 
 scream('Yipeee'); // it outputs nothing to the console. There is a difference between the console and the
@@ -342,8 +341,8 @@ the function arguments, the function body, the function declaration, the functio
 
 ```js
 function multiplyNumbers(num1, num2, num3) {
-	let result = num1 * num2 * num3;
-	return result;
+  let result = num1 * num2 * num3;
+  return result;
 }
 
 let product = multiplyNumbers(2, 3, 4);
@@ -362,8 +361,8 @@ let product = multiplyNumbers(2, 3, 4);
 
 ```js
 function foo(bar, qux) {
-	console.log(bar);
-	console.log(qux);
+  console.log(bar);
+  console.log(qux);
 }
 
 foo('Hello'); // outputs 'Hello' and undefined. In the absence of an argument for an expected parameter, the argument is initialized with undefined
@@ -373,8 +372,8 @@ foo('Hello'); // outputs 'Hello' and undefined. In the absence of an argument fo
 
 ```js
 function foo(bar, qux) {
-	console.log(bar);
-	console.log(qux);
+  console.log(bar);
+  console.log(qux);
 }
 
 foo(42, 3.1415, 2.718); // 42, 3.1415.. additional arguments are simply ignored
@@ -429,11 +428,11 @@ false === (847 == '847'); // false
 
 ```js
 function evenOrOdd(num) {
-	if (num % 2 === 0) {
-		console.log('even');
-		return;
-	}
-	console.log('odd');
+  if (num % 2 === 0) {
+    console.log('even');
+    return;
+  }
+  console.log('odd');
 }
 ```
 
@@ -441,12 +440,12 @@ function evenOrOdd(num) {
 
 ```js
 function evenOrOdd(num) {
-	if (!Number.isInteger(num)) {
-		console.log('Enter a valid integer');
-		return;
-	} else {
-		num % 2 === 0 ? console.log('even') : console.log('odd');
-	}
+  if (!Number.isInteger(num)) {
+    console.log('Enter a valid integer');
+    return;
+  } else {
+    num % 2 === 0 ? console.log('even') : console.log('odd');
+  }
 }
 
 evenOrOdd('string');
@@ -458,16 +457,16 @@ evenOrOdd(2);
 
 ```js
 function barCodeScanner(serial) {
-	switch (serial) {
-		case '123':
-			console.log('Product1');
-		case '113':
-			console.log('Product2');
-		case '142':
-			console.log('Product3');
-		default:
-			console.log('Product not found!');
-	}
+  switch (serial) {
+    case '123':
+      console.log('Product1');
+    case '113':
+      console.log('Product2');
+    case '142':
+      console.log('Product3');
+    default:
+      console.log('Product not found!');
+  }
 }
 
 barCodeScanner('113');
@@ -480,9 +479,9 @@ barCodeScanner('113');
 
 ```js
 if (foo()) {
-	return 'bar';
+  return 'bar';
 } else {
-	return qux();
+  return qux();
 }
 ```
 
@@ -490,11 +489,11 @@ if (foo()) {
 
 ```js
 function isArrayEmpty(arr) {
-	if (arr) {
-		console.log('Not Empty');
-	} else {
-		console.log('Empty');
-	}
+  if (arr) {
+    console.log('Not Empty');
+  } else {
+    console.log('Empty');
+  }
 }
 
 isArrayEmpty([]);
@@ -505,13 +504,13 @@ isArrayEmpty([]);
 
 ```js
 function generateCaps(str) {
-	return str.trim().length > 10 ? str.toUpperCase() : str;
+  return str.trim().length > 10 ? str.toUpperCase() : str;
 }
 
 console.log(
-	generateCaps('hello world'),
-	generateCaps('hello world   '),
-	generateCaps('goodbye')
+  generateCaps('hello world'),
+  generateCaps('hello world   '),
+  generateCaps('goodbye')
 );
 ```
 
@@ -519,19 +518,19 @@ console.log(
 
 ```js
 function checkIntegerRange(integer) {
-	if (!Number.isInteger(integer)) {
-		return 'Not an integer';
-	}
+  if (!Number.isInteger(integer)) {
+    return 'Not an integer';
+  }
 
-	if (integer >= 0 && integer <= 50) {
-		return 'Between 0 and 50 inclusive';
-	} else if (integer > 50 && integer <= 100) {
-		return 'Between 50 and 101 non inclusive';
-	} else if (integer > 100) {
-		return 'Greater than 100';
-	} else {
-		return 'Less than 0';
-	}
+  if (integer >= 0 && integer <= 50) {
+    return 'Between 0 and 50 inclusive';
+  } else if (integer > 50 && integer <= 100) {
+    return 'Between 50 and 101 non inclusive';
+  } else if (integer > 100) {
+    return 'Greater than 100';
+  } else {
+    return 'Less than 0';
+  }
 }
 ```
 
@@ -569,7 +568,7 @@ console.log(undefined ?? null); // null
 
 ```js
 function show(foo = undefined, bar = null) {
-	console.log(`foo is ${foo ?? 3}, bar is ${bar ?? 42}`);
+  console.log(`foo is ${foo ?? 3}, bar is ${bar ?? 42}`);
 }
 
 show(5, 7); // `foo is 5, bar is 7`
@@ -587,9 +586,9 @@ let rlSync = require('readline-sync');
 let my = +rlSync.question("What's your ? ");
 
 function calculateFuture() {
-	for (let futureTime = 10; futureTime <= 40; futureTime += 10) {
-		console.log(`In ${futureTime}, you will be ${futureTime + } years old.`);
-	}
+  for (let futureTime = 10; futureTime <= 40; futureTime += 10) {
+    console.log(`In ${futureTime}, you will be ${futureTime + } years old.`);
+  }
 }
 
 console.log(calculateFuture(my));
@@ -599,12 +598,12 @@ console.log(calculateFuture(my));
 
 ```js
 function factorial(num) {
-	let total = num;
-	for (let counter = 1; counter < num; counter += 1) {
-		total *= counter;
-	}
-	console.log(total);
-	return total;
+  let total = num;
+  for (let counter = 1; counter < num; counter += 1) {
+    total *= counter;
+  }
+  console.log(total);
+  return total;
 }
 
 factorial(1);
@@ -620,12 +619,12 @@ factorial(5);
 let counter = 0;
 
 while ((counter = 1)) {
-	console.log(counter);
-	counter += 1;
+  console.log(counter);
+  counter += 1;
 
-	if (counter > 2) {
-		break;
-	}
+  if (counter > 2) {
+    break;
+  }
 }
 ```
 
@@ -635,7 +634,7 @@ while ((counter = 1)) {
 
 ```js
 for (let i = 0; i < 5; ) {
-	console.log((i += 1));
+  console.log((i += 1));
 }
 ```
 
@@ -647,20 +646,20 @@ for (let i = 0; i < 5; ) {
 let tries = 0;
 
 function randomNumberBetween(min = 1, max = 6) {
-	let result;
+  let result;
 
-	do {
-		result = Math.floor(Math.random() * (max - min + 1) + min);
-		tries += 1;
-	} while (result <= 2);
+  do {
+    result = Math.floor(Math.random() * (max - min + 1) + min);
+    tries += 1;
+  } while (result <= 2);
 
-	return result;
+  return result;
 }
 
 randomNumberBetween(1, 6);
 
 console.log(
-	'It took ' + String(tries) + ' tries to get a number greater than 2'
+  'It took ' + String(tries) + ' tries to get a number greater than 2'
 );
 ```
 
@@ -668,8 +667,8 @@ console.log(
 
 ```js
 function generateFactorial(integer) {
-	if (integer === 1) return 1;
-	return integer * generateFactorial(integer - 1);
+  if (integer === 1) return 1;
+  return integer * generateFactorial(integer - 1);
 }
 
 console.log(generateFactorial(1));
@@ -704,7 +703,7 @@ array5[100] = 3; // 101
 let myArray = [1, 3, 6, 11, 4, 2, 4, 9, 17, 16, 0];
 
 myArray.forEach(value => {
-	if (value % 2 === 0) console.log(value);
+  if (value % 2 === 0) console.log(value);
 });
 ```
 
@@ -712,23 +711,23 @@ myArray.forEach(value => {
 
 ```js
 let myArray = [
-	[1, 3, 6, 11],
-	[4, 2, 4],
-	[9, 17, 16, 0],
+  [1, 3, 6, 11],
+  [4, 2, 4],
+  [9, 17, 16, 0],
 ];
 
 // 1
 myArray.flat(1).forEach(value => {
-	if (value % 2 === 0) console.log(value);
+  if (value % 2 === 0) console.log(value);
 });
 
 // 2
 myArray.forEach(arr => {
-	arr.forEach(value => {
-		if (value % 2 === 0) {
-			console.log(`2nd method: ${value}`);
-		}
-	});
+  arr.forEach(value => {
+    if (value % 2 === 0) {
+      console.log(`2nd method: ${value}`);
+    }
+  });
 });
 ```
 
@@ -750,7 +749,7 @@ let integers = findIntegers(things);
 console.log(integers); // => [1, 3, -4]
 
 function findIntegers(array) {
-	return array.filter(value => Number.isInteger(value));
+  return array.filter(value => Number.isInteger(value));
 }
 
 console.log(findIntegers(things));
@@ -762,7 +761,7 @@ console.log(findIntegers(things));
 let arr = ['a', 'abcd', 'abcde', 'abc', 'ab'];
 
 function oddLengths(array) {
-	return array.map(str => str.length).filter(values => values % 2 !== 0);
+  return array.map(str => str.length).filter(values => values % 2 !== 0);
 }
 
 console.log(oddLengths(arr)); // => [1, 5, 3]
@@ -774,9 +773,9 @@ console.log(oddLengths(arr)); // => [1, 5, 3]
 let array = [3, 5, 7];
 
 function sumOfSquares(arr) {
-	return arr.reduce((total, curr) => {
-		return total + curr ** 2;
-	}, 0);
+  return arr.reduce((total, curr) => {
+    return total + curr ** 2;
+  }, 0);
 }
 
 console.log(sumOfSquares(array)); // => 83
@@ -788,7 +787,7 @@ console.log(sumOfSquares(array)); // => 83
 let arr = ['a', 'abcd', 'abcde', 'abc', 'ab'];
 
 function oddLengths(arr) {
-	return arr.reduce((total, curr) => {}, []);
+  return arr.reduce((total, curr) => {}, []);
 }
 
 console.log(oddLengths(arr)); // => [1, 5, 3]
@@ -802,8 +801,8 @@ let numbers2 = [];
 let numbers3 = [2, 4, 6, 8];
 
 function checkFor3(arr) {
-	console.log(arr.includes(3));
-	return arr.includes(3);
+  console.log(arr.includes(3));
+  return arr.includes(3);
 }
 
 checkFor3(numbers1);
@@ -815,17 +814,17 @@ checkFor3(numbers3);
 
 ```js
 let arr = [
-	['hello', 'world'],
-	['example', 'mem', null, 6, 88],
-	[4, 8, 12],
+  ['hello', 'world'],
+  ['example', 'mem', null, 6, 88],
+  [4, 8, 12],
 ];
 
 arr = arr.map(subarray => {
-	return subarray.includes(6)
-		? subarray.map(val => {
-				return val === 6 ? 606 : val;
-		  })
-		: subarray;
+  return subarray.includes(6)
+    ? subarray.map(val => {
+        return val === 6 ? 606 : val;
+      })
+    : subarray;
 });
 
 console.log(arr);
@@ -839,9 +838,9 @@ console.log(arr);
 
 ```js
 let person = {
-	name: 'Bob',
-	occupation: 'web developer',
-	hobbies: 'painting',
+  name: 'Bob',
+  occupation: 'web developer',
+  hobbies: 'painting',
 };
 
 // answer
@@ -865,13 +864,13 @@ true;
 
 ```js
 let myArray = {
-	0: 'one',
-	1: 'two',
-	2: 'three',
+  0: 'one',
+  1: 'two',
+  2: 'three',
 };
 
 for (let i = 0; i < myArray.length; i += 1) {
-	console.log(myArray[i]);
+  console.log(myArray[i]);
 }
 ```
 
@@ -879,9 +878,9 @@ for (let i = 0; i < myArray.length; i += 1) {
 
 ```js
 let obj = {
-	b: 2,
-	a: 1,
-	c: 3,
+  b: 2,
+  a: 1,
+  c: 3,
 };
 
 const objKeys = Object.keys(obj).map(prop => prop.toUpperCase());
@@ -893,8 +892,8 @@ console.log(objKeys);
 
 ```js
 let myProtoObj = {
-	foo: 1,
-	bar: 2,
+  foo: 1,
+  bar: 2,
 };
 
 const myObj = Object.create(myProtoObj);
@@ -920,7 +919,7 @@ undefined // primitives
 let objKeys = Object.keys(myObj);
 
 objKeys.forEach(function (key) {
-	console.log(key);
+  console.log(key);
 });
 ```
 
@@ -928,13 +927,13 @@ objKeys.forEach(function (key) {
 
 ```js
 let objToCopy = {
-	foo: 1,
-	bar: 2,
-	qux: 3,
+  foo: 1,
+  bar: 2,
+  qux: 3,
 };
 
 function copyObj(obj, array = Object.keys(obj)) {
-	const newObj = {};
+  const newObj = {};
 }
 
 copyObj(objToCopy);
@@ -944,15 +943,15 @@ copyObj(objToCopy);
 
 ```js
 let foo = {
-	a: 'hello',
-	b: 'world',
+  a: 'hello',
+  b: 'world',
 };
 
 let qux = 'hello';
 
 function bar(argument1, argument2) {
-	argument1.a = 'hi';
-	argument2 = 'hi';
+  argument1.a = 'hi';
+  argument2 = 'hi';
 }
 
 bar(foo, qux);
@@ -982,9 +981,9 @@ console.log(qux); // 'hello'
 // Return the newly modified obj
 
 let obj = {
-	foo: { a: 'hello', b: 'world' },
-	bar: ['example', 'mem', null, { xyz: 6 }, 88],
-	qux: [4, 8, 12],
+  foo: { a: 'hello', b: 'world' },
+  bar: ['example', 'mem', null, { xyz: 6 }, 88],
+  qux: [4, 8, 12],
 };
 
 obj.bar[3].xyz = 606;
@@ -996,7 +995,7 @@ console.log(obj);
 
 ```js
 function foo(bar) {
-	console.log(bar, bar, bar);
+  console.log(bar, bar, bar);
 }
 
 foo('hello'); // should print "hello hello hello"
@@ -1009,7 +1008,7 @@ bar('hi'); // should print "hi hi hi"
 
 ```js
 function foo(bar) {
-	console.log(bar());
+  console.log(bar());
 }
 
 foo(() => 'Welcome'); // Should print 'Welcome'
@@ -1021,11 +1020,11 @@ foo(() => [1, 2, 3]); // Should print[1, 2, 3]
 
 ```js
 function hello(greeting, name) {
-	return greeting + ' ' + name;
+  return greeting + ' ' + name;
 }
 
 function xyzzy() {
-	return { a: 1, b: 2, c: [3, 4, 5], d: {} };
+  return { a: 1, b: 2, c: [3, 4, 5], d: {} };
 }
 
 const howdy = hello('Hi', 'Grace');
