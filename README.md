@@ -1,5 +1,14 @@
-# Launch-School
-- A hosting place for all LS files which includes: exercises, projects and notes.
-- All exercises will be inside of the `exercises` folder
-- Projects and small non-coding challenges (ie: PEDAC) will be within the folder named after the
-  course. IE `js_110`
+<!---------------------->
+# ORGANIZATION
+<!---------------------->
+The 2 largest folders are `projects` and `exercises`.
+  - 'Projects': Holds all of the larger programs. It often includes multiple files.
+  - 'Exercises': Bite-sized and smaller in scope. Meant to emphasize a concept or a group of related concepts.
+The macro folders (`projects` and `exercises`) are further organized by its respective course number (ie: `js_101`). All folders and files will use snake_case with a few exceptions. The `exercises` files will use a mix of hyphens and camelCase. A 2–char prefix will designate the local category of exercise followed by the camelCase file name. (ie: `e1-fileName.js` = Easy1 File)
+
+If I do add notes in the future, it will go in the `Wiki` tab.
+
+<!---------------------->
+# DISCLAIMER
+<!---------------------->
+> I will actively try to exclude any assessment related files in this repo.
