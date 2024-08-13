@@ -1,6 +1,7 @@
-//Create a function that takes an array of integers as an argument and returns an
-//array of two numbers that are closest together in value. If there are multiple
-//pairs that are equally close, return the pair that occurs first in the array.
+/* Create a function that takes an array of integers as an argument
+And returns an array of two numbers that are closest together in value.
+If there are multiple pairs that are equally close, return the pair that occurs first in the array.
+*/
 
 /* [35min]
 INPUT: {int[]}

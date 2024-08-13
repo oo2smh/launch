@@ -1,8 +1,9 @@
-//Create a function that takes a string argument and returns the character that
-//occurs most often in the string. If there are multiple characters with the
-//same greatest frequency, return the one that appears first in the string.
-//When counting characters, consider uppercase and lowercase versions to be the
+/* Create a function that takes a string argument and returns the character that
+occurs most often in the string. If there are multiple characters with the
+same greatest frequency, return the one that appears first in the string.
+When counting characters, consider uppercase and lowercase versions to be the
 //same.
+*/
 
 /* [32min]
 INPUT: {str}

@@ -1,7 +1,5 @@
-// Create a function that takes an array of integers as an argument. The
-// function should return the minimum sum of 5 consecutive numbers in the
-// array. If the array contains fewer than 5 elements, the function should
-// return null.
+/* Create a function that takes an array of integers as an argument. The function should return the minimum sum of 5 consecutive numbers in the array. If the array contains fewer than 5 elements, the function should
+return null.
 
 /* [30min]
 INPUT: {int[]}

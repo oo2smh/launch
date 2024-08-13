@@ -1,3 +1,12 @@
+/* PROBLEM
+Create a function that takes an array of numbers as an argument.
+For each number, determine how many numbers in the array are smaller than it,
+and place the answer in an array. Return the resulting array.
+
+When counting numbers, only count unique values.
+That is, if a number occurs multiple times in the array, it should only be counted once.
+*/
+
 /* [18:20-18:42] (22min)
 INPUT: {integers[]}
 OUTPUT: {integers[]}

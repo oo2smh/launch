@@ -1,4 +1,4 @@
-/* [18:14]
+/*
 2 SUM
 ===================
 Problem Statement: Given an array of integers arr[] and an integer target.
@@ -65,4 +65,25 @@ function twoSum(arr, target) {
   return "NO";
 }
 
-console.log(twoSum([1, 2, 3, 4, 5, -15], 0));
+//console.log(twoSum([1, 2, 3, 4, 5, -15], 0));
+
+/*
+CAN also create a hash so that dupe # that have been checked prev don't have
+to be checked again
+O(n^2) worst case scenario
+
+TRAVERSE each i:elem of the arr
+GET inverse of i:elem and look for the inverse in array
+  IF inverse exists then return the out:arr with the 2 idx
+RETURN [-1,-1]
+*/
+
+function twoSumIdx(arr, target) {
+  for (let idx = 0; idx < arr.length; idx++) {
+    let targetIdx = arr.indexOf(-arr[idx]);
+    if (targetIdx !== -1) return [idx, targetIdx];
+  }
+  return [-1, -1];
+}
+
+console.log(twoSumIdx([1, 2, 3, 4, 5, -5], 0));
