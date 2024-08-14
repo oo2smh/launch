@@ -1,4 +1,8 @@
-// Create a function that takes a non-empty string as an argument. The string consists entirely of lowercase alphabetic characters. The function should return the length of the longest vowel substring. The vowels of interest are "a", "e", "i", "o", and "u".
+/* Create a function that takes a non-empty string as an argument. The string
+consists entirely of lowercase alphabetic characters. The function should
+return the length of the longest vowel substring. The vowels of interest are
+"a", "e", "i", "o", and "u".
+*/
 
 /* [16min]
 INPUT: {str} string: non-empty, a-z lowercase
