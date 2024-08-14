@@ -1,4 +1,8 @@
-//Create a function that takes an array of integers as an argument and returns the integer that appears an odd number of times. There will always be exactly one such integer in the input array.
+/*
+Create a function that takes an array of integers as an argument and returns
+the integer that appears an odd number of times. There will always be exactly
+one such integer in the input array.
+*/
 
 /* [6min]
 IN: {int[]}

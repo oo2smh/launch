@@ -1,4 +1,7 @@
-/* Write a fn to find the longest common prefix string common amongst an array of strings. If there is no common prefix, return an empty string "". All given inputs are in lowercase letters a-z */
+/* Write a fn to find the longest common prefix string common amongst an array
+ * of strings. If there is no common prefix, return an empty string "". All
+ * given inputs are in lowercase letters a-z
+ */
 
 /* [26min]
 IN: {str[]} input: a-z lowercase

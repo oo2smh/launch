@@ -1,5 +1,9 @@
-/* Create a function that takes a string of digits as an argument and returns the number of even-numbered substrings that can be formed. For example, in the case of '1432', the even-numbered substrings are '14', '1432', '4', '432', '32', and '2', for a total of 6 substrings.
-If a substring occurs more than once, you should count each occurrence as a separate substring.
+/* Create a function that takes a string of digits as an argument and returns
+ * the number of even-numbered substrings that can be formed. For example, in
+ * the case of '1432', the even-numbered substrings are '14', '1432', '4',
+ * '432', '32', and '2', for a total of 6 substrings.
+If a substring occurs more than once, you should count each occurrence as a
+separate substring.
 */
 
 /* [40min]

@@ -1,7 +1,10 @@
 /*
-Create a function that takes a single integer argument and returns the sum of all the multiples of 7 or 11 that are less than the argument. If a number is a multiple of both 7 and 11, count it just once.
+Create a function that takes a single integer argument and returns the sum of
+all the multiples of 7 or 11 that are less than the argument. If a number is a
+multiple of both 7 and 11, count it just once.
 
-For example, the multiples of 7 and 11 that are below 25 are 7, 11, 14, 21, and 22. The sum of these multiples is 75.
+For example, the multiples of 7 and 11 that are below 25 are 7, 11, 14, 21, and
+22. The sum of these multiples is 75.
 
 If the argument is negative, return 0.
 */

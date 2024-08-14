@@ -1,4 +1,6 @@
-// You have to create a fn that takes a positive integer number and returns the next bigger number formed by the same digits
+/* You have to create a fn that takes a positive integer number and returns the
+next bigger number formed by the same digits
+*/
 
 /* [19min]
 IN: {+int}

@@ -1,5 +1,7 @@
 /*
-Create a function that takes a string argument that consists entirely of numeric digits and computes the greatest product of four consecutive digits in the string. The argument will always have more than 4 digits.
+Create a function that takes a string argument that consists entirely of
+numeric digits and computes the greatest product of four consecutive digits in
+the string. The argument will always have more than 4 digits.
 */
 
 /* [12min]

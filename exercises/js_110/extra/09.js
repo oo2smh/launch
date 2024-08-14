@@ -1,4 +1,8 @@
-// Create a function that takes two string arguments and returns the number of times that the second string occurs in the first string. Note that overlapping strings don't count: 'babab' contains 1 instance of 'bab', not 2. You may assume that the second argument is never an empty string.
+/* Create a function that takes two string arguments and returns the number of
+times that the second string occurs in the first string. Note that
+overlapping strings don't count: 'babab' contains 1 instance of 'bab', not
+2. You may assume that the second argument is never an empty string.
+*/
 
 /* [14:53]
 INPUT {str, str}

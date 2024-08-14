@@ -1,4 +1,10 @@
-//Create a function that takes two strings as arguments and returns true if some portion of the characters in the first string can be rearranged to match the characters in the second. Otherwise, the function should return false. You may assume that both string arguments only contain lowercase alphabetic characters. Neither string will be empty.
+/*
+Create a function that takes two strings as arguments and returns true if
+some portion of the characters in the first string can be rearranged to match
+the characters in the second. Otherwise, the function should return false.
+You may assume that both string arguments only contain lowercase alphabetic
+characters. Neither string will be empty.
+*/
 
 /* [6min]
 INPUT: {str}, {str}

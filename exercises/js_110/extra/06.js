@@ -1,4 +1,7 @@
-// Create a function that takes a str argument and returns a hash in which the keys represent the lowercase letters in the string and the values represent how often the corresponding letter occurs in the string
+/* Create a function that takes a str argument and returns a hash in which the
+ keys represent the lowercase letters in the string and the values represent
+ how often the corresponding letter occurs in the string
+*/
 
 /*
 INPUT: {str} inputStr

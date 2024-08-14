@@ -1,6 +1,8 @@
 /*
-Create a function that takes an array of numbers, all of which are the same except one. Find and return the number in the array that differs from all the rest.
-The array will always contain at least 3 numbers, and there will always be exactly one number that is different.
+Create a function that takes an array of numbers, all of which are the same
+except one. Find and return the number in the array that differs from all the
+rest. The array will always contain at least 3 numbers, and there will always
+be exactly one number that is different.
 */
 
 /*

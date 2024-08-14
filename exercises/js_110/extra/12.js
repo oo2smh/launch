@@ -1,4 +1,10 @@
-//Create a function that takes a string as an argument and returns true if the string is a pangram, false if it is not. Pangrams are sentences that contain every letter of the alphabet at least once. For example, the sentence "Five quacking zephyrs jolt my wax bed." is a pangram since it uses every letter at least once. Note that case is irrelevant.
+/*
+Create a function that takes a string as an argument and returns true if the
+string is a pangram, false if it is not. Pangrams are sentences that contain
+every letter of the alphabet at least once. For example, the sentence "Five
+quacking zephyrs jolt my wax bed." is a pangram since it uses every letter at
+least once. Note that case is irrelevant.
+*/
 
 /* [12min]
 INPUT: {str}
